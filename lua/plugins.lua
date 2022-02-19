@@ -22,5 +22,9 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
+  use {
+    'dense-analysis/ale'
+  }
 end)
 
