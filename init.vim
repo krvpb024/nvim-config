@@ -1,5 +1,12 @@
 lua require('plugins')
 
+:set number
+:set relativenumber
+:set smartindent
+:set expandtab
+:set tabstop=2
+:set shiftwidth=2
+
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -88,3 +95,12 @@ let g:ale_set_quickfix = 1
 let g:ale_open_list = 1
 let g:ale_keep_list_window_open = 1
 let g:ale_list_window_size = 5
+let g:ale_linters = {
+	\ 'javascript': ['eslint'],
+	\ 'css': ['stylelint']
+	\ }
+let g:ale_fixers = {
+	\ 'javascript': ['eslint'],
+	\ 'css': ['stylelint']
+	\ }
+let g:ale_fix_on_save = 1
